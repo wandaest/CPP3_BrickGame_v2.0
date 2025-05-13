@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<!-- Created by GNU Texinfo 7.1, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>States (BrickGame v2.0 Documentation: Finite State Machine)</title>
+
+<meta name="description" content="States (BrickGame v2.0 Documentation: Finite State Machine)">
+<meta name="keywords" content="States (BrickGame v2.0 Documentation: Finite State Machine)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Finite-State-Machine.html" rel="up" title="Finite State Machine">
+<link href="Transitions.html" rel="next" title="Transitions">
+<style type="text/css">
+<!--
+a.copiable-link {visibility: hidden; text-decoration: none; line-height: 0em}
+span:hover a.copiable-link {visibility: visible}
+ul.mark-bullet {list-style-type: disc}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="section-level-extent" id="States">
+<div class="nav-panel">
+<p>
+Next: <a href="Transitions.html" accesskey="n" rel="next">Transitions</a>, Up: <a href="Finite-State-Machine.html" accesskey="u" rel="up">Finite State Machine</a> &nbsp; </p>
+</div>
+<hr>
+<h3 class="section" id="States-1"><span>1.1 States<a class="copiable-link" href="#States-1"> &para;</a></span></h3>
+<ul class="itemize mark-bullet">
+<li><code class="code">START</code> (0): Initial state, waiting for game start.
+</li><li><code class="code">SPAWN</code> (1): Preparing initial snake and apple positions.
+</li><li><code class="code">MOVING</code> (2): Active snake movement.
+</li><li><code class="code">PAUSE</code> (3): Game paused.
+</li><li><code class="code">GAMEOVER</code> (6): Game over due to collision.
+</li><li><code class="code">WIN</code> (8): Game won when snake length reaches 200.
+</li><li><code class="code">EXIT_STATE</code> (7): Exit game.
+</li></ul>
+
+</div>
+
+
+
+</body>
+</html>

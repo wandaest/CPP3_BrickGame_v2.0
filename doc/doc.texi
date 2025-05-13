@@ -1,0 +1,55 @@
+\input texinfo
+@settitle BrickGame v2.0 Documentation: Finite State Machine
+@setfilename brickgame.info
+
+@titlepage
+@title BrickGame v2.0: Finite State Machine
+@author Your Name
+@page
+@end titlepage
+
+@node Top
+@top BrickGame v2.0 Documentation
+
+@menu
+* Finite State Machine::
+@end menu
+
+@node Finite State Machine
+@chapter Finite State Machine
+
+@menu
+* States::
+* Transitions::
+* Diagram::
+@end menu
+
+@node States
+@section States
+@itemize @bullet
+@item @code{START} (0): Initial state, waiting for game start.
+@item @code{SPAWN} (1): Preparing initial snake and apple positions.
+@item @code{MOVING} (2): Active snake movement.
+@item @code{PAUSE} (3): Game paused.
+@item @code{GAMEOVER} (6): Game over due to collision.
+@item @code{WIN} (8): Game won when snake length reaches 200.
+@item @code{EXIT_STATE} (7): Exit game.
+@end itemize
+
+@node Transitions
+@section Transitions
+@itemize @bullet
+@item @code{START} -> @code{SPAWN}: On @code{Start} action.
+@item @code{SPAWN} -> @code{MOVING}: On @code{NOSIG} action.
+@item @code{MOVING} -> @code{PAUSE}: On @code{Pause} action.
+@item @code{PAUSE} -> @code{MOVING}: On @code{Pause} action.
+@item @code{MOVING} -> @code{GAMEOVER}: On collision.
+@item @code{MOVING} -> @code{WIN}: When length = 200.
+@item Any state -> @code{EXIT_STATE}: On @code{Terminate} action.
+@end itemize
+
+@node Diagram
+@section Diagram
+Since Texinfo does not support graphical diagrams directly, please refer to the accompanying image @file{snake_fsm_diagram.png} for the finite state machine diagram.
+
+@bye

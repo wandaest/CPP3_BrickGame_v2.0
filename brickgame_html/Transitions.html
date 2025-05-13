@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!-- Created by GNU Texinfo 7.1, https://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Transitions (BrickGame v2.0 Documentation: Finite State Machine)</title>
+
+<meta name="description" content="Transitions (BrickGame v2.0 Documentation: Finite State Machine)">
+<meta name="keywords" content="Transitions (BrickGame v2.0 Documentation: Finite State Machine)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="index.html" rel="start" title="Top">
+<link href="Finite-State-Machine.html" rel="up" title="Finite State Machine">
+<link href="Diagram.html" rel="next" title="Diagram">
+<link href="States.html" rel="prev" title="States">
+<style type="text/css">
+<!--
+a.copiable-link {visibility: hidden; text-decoration: none; line-height: 0em}
+span:hover a.copiable-link {visibility: visible}
+ul.mark-bullet {list-style-type: disc}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<div class="section-level-extent" id="Transitions">
+<div class="nav-panel">
+<p>
+Next: <a href="Diagram.html" accesskey="n" rel="next">Diagram</a>, Previous: <a href="States.html" accesskey="p" rel="prev">States</a>, Up: <a href="Finite-State-Machine.html" accesskey="u" rel="up">Finite State Machine</a> &nbsp; </p>
+</div>
+<hr>
+<h3 class="section" id="Transitions-1"><span>1.2 Transitions<a class="copiable-link" href="#Transitions-1"> &para;</a></span></h3>
+<ul class="itemize mark-bullet">
+<li><code class="code">START</code> -&gt; <code class="code">SPAWN</code>: On <code class="code">Start</code> action.
+</li><li><code class="code">SPAWN</code> -&gt; <code class="code">MOVING</code>: On <code class="code">NOSIG</code> action.
+</li><li><code class="code">MOVING</code> -&gt; <code class="code">PAUSE</code>: On <code class="code">Pause</code> action.
+</li><li><code class="code">PAUSE</code> -&gt; <code class="code">MOVING</code>: On <code class="code">Pause</code> action.
+</li><li><code class="code">MOVING</code> -&gt; <code class="code">GAMEOVER</code>: On collision.
+</li><li><code class="code">MOVING</code> -&gt; <code class="code">WIN</code>: When length = 200.
+</li><li>Any state -&gt; <code class="code">EXIT_STATE</code>: On <code class="code">Terminate</code> action.
+</li></ul>
+
+</div>
+
+
+
+</body>
+</html>
